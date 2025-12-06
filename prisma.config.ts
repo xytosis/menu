@@ -10,6 +10,6 @@ export default defineConfig({
   },
   datasource: {
     url: env("DATABASE_URL"),
-    shadowDatabaseUrl: env("HEROKU_POSTGRESQL_SILVER"), // Keep this to suppress the error
+    shadowDatabaseUrl: env("HEROKU_POSTGRESQL_SILVER_URL"), // Keep this to suppress the error
   },
 });
