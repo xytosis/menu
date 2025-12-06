@@ -1,0 +1,19 @@
+datasource db {
+  provider  = "postgresql"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model MenuItem {
+  id              Int      @id @default(autoincrement())
+  guid            String   @unique @default(uuid()) @db.Uuid
+  restaurant_guid String   @db.Uuid 
+  name            String   @unique
+  description     String?
+  price           Float
+  isAvailable     Boolean  @default(true)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
