@@ -9,7 +9,7 @@ export default defineConfig({
     path: "prisma/migrations",
   },
   datasource: {
-    url: env("DATABASE"),
+    url: env("DATABASE_URL"),
     shadowDatabaseUrl: env("HEROKU_POSTGRESQL_SILVER"), // Keep this to suppress the error
   },
 });
